@@ -1,0 +1,6 @@
+<zk>
+    <window apply="org.wildfly.myzkapp.client.controller.home.HomeController">
+        <label id="welcomeLabel" />
+        <button id="toTableButton" />
+    </window>
+</zk>

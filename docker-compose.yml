@@ -1,0 +1,30 @@
+version: '3'
+services:
+  wildfly:
+    image: jboss/wildfly:24.0.0.Final
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+    volumes:
+      - ./deployments:/opt/jboss/wildfly/standalone/deployments
+    depends_on:
+      - mysql
+    networks:
+      - myzkapp-network
+
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=myzkapp
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    networks:
+      - myzkapp-network
+
+networks:
+  myzkapp-network:

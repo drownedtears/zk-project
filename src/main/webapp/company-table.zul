@@ -1,0 +1,19 @@
+<zk>
+    <window apply="org.wildfly.myzkapp.client.controller.table.CompanyTableController"
+            viewModel="@id('vm') @init('org.wildfly.myzkapp.client.viewmodel.CompanyHeadViewModel')">
+
+        <label id="companyTableLabel" />
+        <listbox id="companyTableListbox" model="@init(vm.companyHeads)">
+            <listhead>
+                <listheader label="Название"/>
+                <listheader label="Правовая форма"/>
+            </listhead>
+            <template name="model">
+                <listitem>
+                    <listcell label="@init(each.name)"/>
+                    <listcell label="@init(each.legalForm)"/>
+                </listitem>
+            </template>
+        </listbox>
+    </window>
+</zk>
