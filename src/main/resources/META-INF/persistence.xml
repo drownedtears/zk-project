@@ -6,6 +6,10 @@
 
     <persistence-unit name="main" transaction-type="JTA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>org.wildfly.myzkapp.server.entity.pojo.CompanyHead</class>
+        <class>org.wildfly.myzkapp.server.entity.pojo.CompanyBranch</class>
+        <class>org.wildfly.myzkapp.server.entity.pojo.Address</class>
     </persistence-unit>
 
 </persistence>

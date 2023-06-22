@@ -1,14 +1,16 @@
 package org.wildfly.myzkapp.client.viewmodel;
 
+import org.wildfly.myzkapp.client.service.ICompanyTableControllerService;
 import org.wildfly.myzkapp.shared.dto.address.AddressResponse;
 import org.wildfly.myzkapp.shared.dto.companyhead.CompanyHeadResponse;
 import org.zkoss.zul.ListModelList;
 
+import javax.inject.Inject;
 import java.util.List;
 
 public class CompanyHeadViewModel {
-    //@Inject
-    //private ICompanyTableControllerService companyTableControllerService;
+    @Inject
+    private ICompanyTableControllerService companyTableControllerService;
 
     private final ListModelList<CompanyHeadResponse> companyHeads;
 
@@ -22,13 +24,13 @@ public class CompanyHeadViewModel {
 
     private ListModelList<CompanyHeadResponse> createCompanyHeadsModelList() {
         ListModelList<CompanyHeadResponse> companyHeads = new ListModelList<>();
-        //companyHeads.addAll(loadAllCompanyHeads());
+        companyHeads.addAll(loadAllCompanyHeads());
         CompanyHeadResponse companyHeadResponse = new CompanyHeadResponse("test", new AddressResponse(), "OOO");
         companyHeads.add(companyHeadResponse);
         return companyHeads;
     }
 
     private List<CompanyHeadResponse> loadAllCompanyHeads() {
-        return null; //companyTableControllerService.getAllCompanyHeads();
+        return companyTableControllerService.getAllCompanyHeads();
     }
 }

@@ -6,6 +6,7 @@ import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Label;
+import org.zkoss.zul.Listbox;
 
 
 public class CompanyTableController extends SelectorComposer<Component> {
@@ -13,8 +14,8 @@ public class CompanyTableController extends SelectorComposer<Component> {
     @Wire
     private Label companyTableLabel;
 
-    //@Wire
-    //private Listbox companyTableListbox;
+    @Wire
+    private Listbox companyTableListbox;
 
     private final CompanyHeadViewModel companyHeadViewModel = new CompanyHeadViewModel();
 
@@ -26,7 +27,7 @@ public class CompanyTableController extends SelectorComposer<Component> {
             companyTableLabel.setValue("К сожалению не найдено ни одной компании :(");
         } else {
             companyTableLabel.setValue("Вот таблица со всем компаниям :)");
-            //companyTableListbox.setModel(companyHeads);
+            companyTableListbox.setModel(companyHeads);
         }
     }
 }

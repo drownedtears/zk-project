@@ -27,6 +27,8 @@
         <maven.compiler.target>1.7</maven.compiler.target>
         <maven.compiler.source>1.7</maven.compiler.source>
         <zk.version>9.0.0</zk.version>
+        <lombok.version>1.18.20</lombok.version>
+        <hibernate.version>5.5.7.Final</hibernate.version>
     </properties>
 
     <dependencyManagement>
@@ -61,26 +63,26 @@
         <dependency>
             <groupId>org.zkoss.zk</groupId>
             <artifactId>zul</artifactId>
-            <version>9.0.0</version>
+            <version>${zk.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.zkoss.zk</groupId>
             <artifactId>zk</artifactId>
-            <version>9.0.0</version>
+            <version>${zk.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.5.7.Final</version>
+            <version>${hibernate.version}</version>
         </dependency>
 
         <dependency>
@@ -134,7 +136,7 @@
             <plugin>
                 <groupId>org.hibernate.orm.tooling</groupId>
                 <artifactId>hibernate-enhance-maven-plugin</artifactId>
-                <version>5.5.7.Final</version>
+                <version>${hibernate.version}</version>
                 <executions>
                     <execution>
                         <configuration>
