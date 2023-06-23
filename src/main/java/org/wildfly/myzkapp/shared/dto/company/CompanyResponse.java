@@ -1,4 +1,4 @@
-package org.wildfly.myzkapp.shared.dto.companyhead;
+package org.wildfly.myzkapp.shared.dto.company;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import org.wildfly.myzkapp.shared.dto.address.AddressResponse;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CompanyHeadResponse {
+public class CompanyResponse {
     private String name;
 
     private AddressResponse address;

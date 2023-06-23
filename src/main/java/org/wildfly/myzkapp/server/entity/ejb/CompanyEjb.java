@@ -13,7 +13,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CompanyHeadEjb {
+public class CompanyEjb {
     private String name;
 
     private String legalForm;

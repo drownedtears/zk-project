@@ -1,8 +1,8 @@
 package org.wildfly.myzkapp.client.impl;
 
 import org.wildfly.myzkapp.client.service.ICompanyTableControllerService;
-import org.wildfly.myzkapp.shared.dto.companyhead.CompanyHeadResponse;
-import org.wildfly.myzkapp.shared.impl.CompanyHeadServiceImpl;
+import org.wildfly.myzkapp.shared.dto.company.CompanyResponse;
+import org.wildfly.myzkapp.shared.impl.CompanyServiceImpl;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -13,10 +13,10 @@ import java.util.List;
 public class CompanyTableControllerServiceImpl implements ICompanyTableControllerService {
 
     @Inject
-    private CompanyHeadServiceImpl companyHeadService;
+    private CompanyServiceImpl companyService;
 
     @Override
-    public List<CompanyHeadResponse> getAllCompanyHeads() {
-        return companyHeadService.getAllCompanyHeads();
+    public List<CompanyResponse> getAllCompanies() {
+        return companyService.getAllCompanies();
     }
 }

@@ -13,8 +13,8 @@ import static javax.persistence.GenerationType.AUTO;
 @Getter
 @Setter
 @Entity
-@Table(name = "company_head")
-public class CompanyHead {
+@Table(name = "company")
+public class Company {
     @Id
     @GeneratedValue(strategy = AUTO)
     @Column(name = "id")

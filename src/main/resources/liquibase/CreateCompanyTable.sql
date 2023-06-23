@@ -1,4 +1,4 @@
-CREATE TABLE company_head (
+CREATE TABLE company (
                               id BIGINT AUTO_INCREMENT PRIMARY KEY,
                               name VARCHAR(255) NOT NULL,
                               legal_form VARCHAR(255),
