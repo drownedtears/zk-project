@@ -1,17 +1,19 @@
+<?variable-resolver class="org.wildfly.myzkapp.client.viewmodel.ViewModelResolver"?>
 <zk>
     <window apply="org.wildfly.myzkapp.client.controller.table.CompanyTableController"
-            viewModel="@id('vm') @init('org.wildfly.myzkapp.client.viewmodel.CompanyHeadViewModel')">
+            viewModel="@id('vm') @init('companyvm')">
+        <style src="./styles/company-table.css"></style>
 
         <label id="companyTableLabel" />
-        <listbox id="companyTableListbox" model="@init(vm.companyHeads)">
+        <listbox sclass="company-table" id="companyTableListbox" model="@bind(vm.companies)">
             <listhead>
                 <listheader label="Название"/>
                 <listheader label="Правовая форма"/>
             </listhead>
-            <template name="model">
+            <template name="model" var="item">
                 <listitem>
-                    <listcell label="@init(each.name)"/>
-                    <listcell label="@init(each.legalForm)"/>
+                    <listcell label="@bind(item.name)"/>
+                    <listcell label="@bind(item.legalForm)"/>
                 </listitem>
             </template>
         </listbox>

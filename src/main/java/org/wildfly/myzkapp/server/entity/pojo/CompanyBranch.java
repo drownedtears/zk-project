@@ -26,5 +26,5 @@ public class CompanyBranch {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_head_id")
-    private CompanyHead companyHead;
+    private Company companyHead;
 }
