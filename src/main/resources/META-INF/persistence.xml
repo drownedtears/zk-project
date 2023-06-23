@@ -6,7 +6,7 @@
 
     <persistence-unit name="main">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <!--<jta-data-source>java:jboss/datasources/myzkapp</jta-data-source>-->
+        <jta-data-source>java:jboss/datasources/myzkapp</jta-data-source>
 
         <class>org.wildfly.myzkapp.server.entity.pojo.Company</class>
         <class>org.wildfly.myzkapp.server.entity.pojo.CompanyBranch</class>
