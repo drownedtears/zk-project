@@ -9,7 +9,7 @@
         <jta-data-source>java:jboss/datasources/myzkapp</jta-data-source>
 
         <class>org.wildfly.myzkapp.server.entity.pojo.Company</class>
-        <class>org.wildfly.myzkapp.server.entity.pojo.CompanyBranch</class>
+        <class>org.wildfly.myzkapp.server.entity.pojo.BranchCompany</class>
         <class>org.wildfly.myzkapp.server.entity.pojo.Address</class>
 
         <properties>

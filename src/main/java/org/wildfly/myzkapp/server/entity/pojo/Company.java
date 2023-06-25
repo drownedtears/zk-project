@@ -31,5 +31,5 @@ public class Company {
     private Address address;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "companyHead")
-    private Set<CompanyBranch> companyBranches = new HashSet<>(0);
+    private Set<BranchCompany> branchCompanies = new HashSet<>(0);
 }

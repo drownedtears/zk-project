@@ -10,8 +10,8 @@ import static javax.persistence.GenerationType.AUTO;
 @Getter
 @Setter
 @Entity
-@Table(name = "company_branch")
-public class CompanyBranch {
+@Table(name = "branch_company")
+public class BranchCompany {
     @Id
     @GeneratedValue(strategy = AUTO)
     @Column(name = "id")

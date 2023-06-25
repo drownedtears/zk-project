@@ -1,0 +1,9 @@
+<zk>
+    <window apply="org.wildfly.myzkapp.client.controller.table.BranchCompanyTableController">
+        <style src="./styles/branch-company-table.css"></style>
+
+        <label id="branchCompanyTableLabel" />
+        <button id="toHomeButton" />
+        <listbox sclass="branch-company-table" id="branchCompanyTableListbox"></listbox>
+    </window>
+</zk>

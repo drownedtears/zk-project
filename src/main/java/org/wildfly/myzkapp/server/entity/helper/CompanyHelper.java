@@ -27,7 +27,7 @@ public class CompanyHelper {
         companyEjb.setName(company.getName());
         companyEjb.setAddress(toAddressEjb(company.getAddress()));
         companyEjb.setLegalForm(company.getLegalForm());
-        companyEjb.getCompanyBranches().addAll(company.getCompanyBranches());
+        companyEjb.getBranchCompanies().addAll(company.getBranchCompanies());
         return companyEjb;
     }
 

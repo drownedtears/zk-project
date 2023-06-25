@@ -1,4 +1,4 @@
-CREATE TABLE company_branch (
+CREATE TABLE branch_company (
                                 id BIGINT AUTO_INCREMENT PRIMARY KEY,
                                 name VARCHAR(255) NOT NULL,
                                 address_id BIGINT NOT NULL,
