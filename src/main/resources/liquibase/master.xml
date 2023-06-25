@@ -8,6 +8,6 @@
        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <include file="CreateCompanyTable.sql"/>
-    <include file="CreateCompanyBranchTable.sql"/>
+    <include file="CreateBranchCompanyTable.sql"/>
     <include file="CreateAddressTable.sql"/>
 </databaseChangeLog>
